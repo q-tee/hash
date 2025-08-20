@@ -10,7 +10,7 @@ list of the implemented algorithms:
 - MURMUR3 32
 
 # usage
-all hash implementations have a uniform appearance, so the example usage also remains same for the all of them
+all hash implementations have a uniform appearance, so the example usage also remains same for the all of them.
 
 to generate hash of the byte buffer:
 ```cpp
@@ -52,4 +52,8 @@ MURMUR3    | Q_HASH_MURMUR3_FIRST, Q_HASH_MURMUR3_SECOND, Q_HASH_MURMUR3_THIRD, 
 other options available for various algorithms:
 hash   | definition          | note
 ------ | ------------------- | ----
-CRC 32 | Q_HASH_CRC32_NO_LUT | do not use lookup table for the hash calculation, saves 1KB of the binary size
+CRC 32 | Q_HASH_CRC32_NO_LUT | do not use lookup table for the hash calculation, saves ~1KB of the binary size
+
+# further information
+has opt-in integration with the [common](https://github.com/q-tee/common/) and [crt](https://github.com/q-tee/crt/) libraries.
+you can read about installation, contributing and look for other general information on the [q-tee](https://github.com/q-tee/) main page.
