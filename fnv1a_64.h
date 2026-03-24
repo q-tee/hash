@@ -49,7 +49,6 @@ namespace FNV1A_64
 	/// @param[in] szSource null-terminated string for which the hash will be generated
 	/// @param[in] ullBasis initial key of the hash generation
 	/// @returns: calculated at compile-time hash of the given string
-	template <typename T = char> requires (std::is_same_v<T, char> || std::is_same_v<T, wchar_t>)
 	consteval FNV1A64_t HashConst(const char* szSource, const FNV1A64_t ullBasis = Q_HASH_FNV1A_64_BASIS) noexcept
 	{
 		return (*szSource == '\0') ? ullBasis : HashConst(szSource + 1, (ullBasis ^ static_cast<std::uint8_t>(*szSource)) * Q_HASH_FNV1A_64_PRIME);
